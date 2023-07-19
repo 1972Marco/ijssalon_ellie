@@ -9,8 +9,8 @@ reclame_tekst2 = reclame_tekst[:62] # aanbieding heeft de waarde 3.2 en heeft ge
 reclame_tekst3 = reclame_tekst2.upper()
 reclame_tekst4 = reclame_tekst3.split(" ")
 for el in reclame_tekst4:
-    print(el)
-    
+    print(el.lower())
+
 
 
 
