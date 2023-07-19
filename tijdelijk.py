@@ -15,6 +15,7 @@ for el in reclame_tekst4:
     else:
         print(el)
 
+# Opdracht 11
 
 
 
