@@ -3,10 +3,13 @@ def aanbieding_1(smaak, prijs, korting):
     kortingsprijs = prijs - (prijs * korting)
     kortingsprijs = format(kortingsprijs,".2f") # Dit om twee cijfers achter de komma te krijgen (opgezocht op internet)  
     return (f"Vandaag in de aanbieding: emmertje ijs (1 liter) in de smaak {smaak}, van {prijs} euro voor {kortingsprijs} euro.")
-def inkomsten_totaal(a1,a2,a3,a4,a5,a6,a7,btw):
-    totaal=sum([a1,a2,a3,a4,a5,a6,a7])
-    bedrag = totaal * btw
-    return (f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {bedrag} euro btw betaald dient te worden.")
+def inkomsten_totaal(inkomsten,btw):
+    totaal=0
+    for bedrag in inkomsten:
+        totaal += bedrag
+    btw_bedrag = totaal * btw
+    uitvoer = f"Het totaal van alle inkomsten van deze week is {totaal} euro, waarover {btw_bedrag} euro btw betaald dient te worden."
+    return uitvoer
 def laag_en_hoog(mijn_lijst):
     a = max(mijn_lijst)
     b = min(mijn_lijst)
